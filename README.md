@@ -9,3 +9,4 @@ template for C projects, using modern CMake
 - turning off C extensions
 - setting C standard
 - target installation (executable)
+- simple library

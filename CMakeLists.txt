@@ -5,6 +5,8 @@ project(template
   LANGUAGES C
 )
 
+add_subdirectory(lib)
+
 add_executable(${PROJECT_NAME})
 
 set_target_properties(${PROJECT_NAME}
@@ -28,6 +30,11 @@ target_compile_options(${PROJECT_NAME}
       -Wextra
       -pedantic
     >
+)
+
+target_link_libraries(${PROJECT_NAME}
+  PRIVATE
+    mylib
 )
 
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)
