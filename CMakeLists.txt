@@ -27,6 +27,11 @@ target_include_directories(${PROJECT_NAME}
     ${CMAKE_CURRENT_LIST_DIR}/include
 )
 
+target_compile_definitions(${PROJECT_NAME}
+  PRIVATE
+    TEST_DEFINE=37
+)
+
 target_compile_options(${PROJECT_NAME}
   PRIVATE
     $<$<OR:$<C_COMPILER_ID:Clang>,$<C_COMPILER_ID:GNU>>:
