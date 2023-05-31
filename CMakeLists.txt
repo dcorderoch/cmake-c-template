@@ -26,6 +26,7 @@ else ()
   endif ()
 endif (WIN32)
 
+add_compile_options(${GLOBAL_CFLAGS})
 
 add_subdirectory(lib)
 
