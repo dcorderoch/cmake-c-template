@@ -1,8 +1,8 @@
-#include <mylib.h>
+#include <shared.h>
 #include <math.h>
 
 double
-mylib(void)
+shared(void)
 {
   return sin(2.3f);
 }

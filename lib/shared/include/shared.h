@@ -1,15 +1,15 @@
-#if !defined(MYLIB_H)
-#define MYLIB_H
+#if !defined(SHARED_H)
+#define SHARED_H
 
 #if defined(__cplusplus)
 extern "C" {
 #endif
 
 double
-mylib(void);
+shared(void);
 
 #if defined(__cplusplus)
 }
 #endif
 
-#endif /* MYLIB_H */
+#endif /* SHARED_H */
