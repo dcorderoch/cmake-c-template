@@ -14,3 +14,4 @@ template for C projects, using modern CMake
 - target installation (executable)
 - simple shared/dynamic library
 - simple static library
+- simple library that can be static or shared
