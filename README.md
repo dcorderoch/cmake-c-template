@@ -15,3 +15,7 @@ template for C projects, using modern CMake
 - simple shared/dynamic library
 - simple static library
 - simple library that can be static or shared
+
+## to do
+
+- add an "app library" (app "business logic" that's object files, see cmake's Object Libraries)
