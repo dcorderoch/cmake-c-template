@@ -5,7 +5,7 @@ template for C projects, using modern CMake
 ## using
 
 - target-specific definition for main executable
-- target-specific include directory for the main executable
+- target-specific include directories for targets
 - global warning compile options
 - target-specific compile options (dummy unshared warnings)
 - disabling C++ via project()'s LANGUAGES C
@@ -13,3 +13,4 @@ template for C projects, using modern CMake
 - setting C standard
 - target installation (executable)
 - simple shared/dynamic library
+- simple static library
