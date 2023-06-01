@@ -36,3 +36,10 @@ target_link_libraries(${PROJECT_NAME}
       m
     >
 )
+
+install(TARGETS ${PROJECT_NAME}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
+  LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+  # NOTE: I don't want this, but this is how the .lib file would be installed on windows
+  # ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/${PROJECT_NAME}
+)
