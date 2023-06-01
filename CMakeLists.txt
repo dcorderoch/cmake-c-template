@@ -50,11 +50,6 @@ target_sources(${PROJECT_NAME}
     ${CMAKE_CURRENT_LIST_DIR}/src/main.c
 )
 
-target_include_directories(${PROJECT_NAME}
-  PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/include
-)
-
 target_compile_definitions(${PROJECT_NAME}
   PRIVATE
     TEST_DEFINE=37
@@ -67,11 +62,26 @@ target_compile_options(${PROJECT_NAME}
     >
 )
 
+set(APP_LOGIC app)
+
+add_library(${APP_LOGIC} OBJECT)
+
+target_sources(${APP_LOGIC}
+  PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/src/point.c
+)
+
+target_include_directories(${APP_LOGIC}
+  PUBLIC
+    ${CMAKE_CURRENT_LIST_DIR}/include
+)
+
 target_link_libraries(${PROJECT_NAME}
   PRIVATE
     shared
     static
     custom
+    ${APP_LOGIC}
 )
 
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)

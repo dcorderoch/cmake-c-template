@@ -15,7 +15,13 @@ template for C projects, using modern CMake
 - simple shared/dynamic library
 - simple static library
 - simple library that can be static or shared
+- "app library" ("app business logic" that's object files, see cmake's Object Libraries)
 
 ## to do
 
-- add an "app library" (app "business logic" that's object files, see cmake's Object Libraries)
+- test windows feature parity
+- make installer
+  * NSIS is in cmake book
+  * Linux?
+- add tests
+  * tests must compile and run quickly, see [doctest](https://github.com/doctest/doctest)
